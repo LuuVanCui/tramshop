@@ -26,6 +26,10 @@
       integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
     <!-- Main css -->
     <link rel="stylesheet" href="style.css" />
     <title>SORAI SHOP</title>
@@ -33,36 +37,57 @@
 
   <body>
     <main class="container">
-      <header class="app-header">
-        <div class="header-container">
-          <!-- Logo Section -->
-          <div class="logo">
-            <a href="#">
-              <img src="/images/logo.JPG" alt="Shop Logo" />
-            </a>
+      <header class="header">
+        <div class="header__content">
+          <div class="header__logo">
+            <img src="/images/logo.JPG" alt="App Logo" />
           </div>
 
-          <!-- Navigation Links -->
-          <nav class="nav-links">
-            <ul>
-              <li><a href="#">Home</a></li>
-              <li><a href="#">All Products</a></li>
-              <li><a href="#">Categories</a></li>
-              <li><a href="#">Contact</a></li>
+          <nav class="sidebar__nav">
+            <ul class="sidebar__menu">
+              <li><a href="#" class="sidebar__link">Home</a></li>
+              <li class="sidebar__dropdown">
+                <a href="#" class="sidebar__link">Categories</a>
+                <ul class="sidebar__dropdown-menu">
+                  <li>
+                    <a href="#" class="sidebar__dropdown-link">Category 1</a>
+                  </li>
+                  <li>
+                    <a href="#" class="sidebar__dropdown-link">Category 2</a>
+                  </li>
+                  <li>
+                    <a href="#" class="sidebar__dropdown-link">Category 3</a>
+                  </li>
+                  <li>
+                    <a href="#" class="sidebar__dropdown-link">Category 4</a>
+                  </li>
+                  <li>
+                    <a href="#" class="sidebar__dropdown-link">Category 5</a>
+                  </li>
+                </ul>
+              </li>
             </ul>
           </nav>
 
-          <!-- Language Switcher and Contact -->
-          <div class="header-right">
-            <!-- Language Switcher -->
-            <div class="language-switcher">
-              <button class="lang-btn" id="lang-vi">VI</button>
-              <button class="lang-btn" id="lang-japan">JAPAN</button>
+          <div class="header__actions">
+            <div class="header__lang">
+              <button class="header__lang-btn" id="lang-vi">VI</button>
+              <button class="header__lang-btn" id="lang-japan">JP</button>
             </div>
 
-            <!-- Contact Information -->
-            <div class="contact-info">
-              <p>Call Us: <a href="tel:+123456789">+123 456 789</a></p>
+            <div class="header__contact">
+              <a href="tel:+123456789" class="header__phone">
+                <i class="fas fa-phone"></i>
+                <span class="header__phone-number">0123 456 789</span>
+              </a>
+              <a
+                href="https://www.facebook.com/yourfacebook"
+                target="_blank"
+                class="header__facebook"
+              >
+                <i class="fab fa-facebook-f"></i>
+                <span class="header__facebook-text">Tram Shop</span>
+              </a>
             </div>
           </div>
         </div>

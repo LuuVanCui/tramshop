@@ -1,3 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #4a90e2;
+  --secondary-color: #f5a623;
+  --text-color: #333;
+  --background-color: #fff;
+  --header-height: 60px;
+}
+
 body {
   font-family: "Roboto", sans-serif;
   font-size: large;
@@ -14,102 +28,180 @@ p {
   cursor: pointer;
 }
 
-/* General Header Styles */
-.app-header {
+/* Header Container */
+/* Sticky White Header */
+.header {
+  background-color: #fff; /* White background */
+  color: #333; /* Dark text for contrast */
   padding: 10px 20px;
-  border-bottom: 1px solid #ddd;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Light shadow for separation */
+  transition: background-color 0.3s ease; /* Smooth transition on scroll */
 }
 
-.header-container {
-  max-width: 1200px;
+.header__content {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  width: 100%;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
-/* Logo Section */
-.logo img {
-  width: 100px;
-  height: auto;
+/* Logo */
+.header__logo img {
+  max-height: 80px;
 }
 
-/* Navigation Links */
-.nav-links ul {
-  list-style: none;
+/* Navigation */
+.sidebar__nav {
+  flex-grow: 1;
+  margin-left: 20px;
+}
+
+.sidebar__menu {
   display: flex;
-  gap: 20px;
-  padding: 0;
-  margin: 0;
+  list-style: none;
 }
 
-.nav-links ul li a {
-  text-decoration: none;
-  font-weight: bold;
+.sidebar__link {
   color: #333;
-  transition: color 0.3s;
+  text-decoration: none;
+  padding: 8px 12px;
+  display: block;
 }
 
-.nav-links ul li a:hover {
-  color: #007bff;
+.sidebar__link:hover {
+  background-color: #f1f1f1;
 }
 
-/* Language Switcher */
-.language-switcher {
+/* Dropdown */
+.sidebar__dropdown {
+  position: relative;
+}
+
+.sidebar__dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  list-style: none;
+}
+
+.sidebar__dropdown:hover .sidebar__dropdown-menu {
+  display: block;
+}
+
+.sidebar__dropdown-link {
+  color: #333;
+  padding: 0 10px;
+  text-decoration: none;
+}
+
+.sidebar__dropdown-link:hover {
+  background-color: #f1f1f1;
+}
+
+/* Actions */
+.header__actions {
   display: flex;
   align-items: center;
-  gap: 10px;
 }
 
-.lang-btn {
-  border: 1px solid #007bff;
-  background-color: transparent;
-  color: #007bff;
-  padding: 5px 10px;
-  border-radius: 5px;
-  font-size: 14px;
+.header__lang {
+  margin-right: 20px;
+}
+
+.header__lang-btn {
+  background: #e0e0e0;
+  border: none;
+  color: #333;
+  padding: 6px 10px;
   cursor: pointer;
-  transition: all 0.3s;
-}
-
-.lang-btn:hover {
-  background-color: #007bff;
-  color: #fff;
-}
-
-/* Contact Information */
-.contact-info p {
-  margin: 0;
   font-size: 14px;
-  color: #555;
+  border-radius: 4px;
 }
 
-.contact-info a {
-  color: #007bff;
+.header__lang-btn:hover {
+  background-color: #ccc;
+}
+
+.header__contact {
+  display: flex;
+  align-items: center;
+}
+
+.header__phone,
+.header__facebook {
+  color: #333;
   text-decoration: none;
+  margin-right: 15px;
+  display: flex;
+  align-items: center;
 }
 
-.contact-info a:hover {
-  text-decoration: underline;
+.header__phone i,
+.header__facebook i {
+  margin-right: 8px;
 }
 
-/* Responsive Styles */
+.header__phone:hover,
+.header__facebook:hover {
+  color: #777;
+}
+
+/* Mobile Styles */
 @media (max-width: 768px) {
-  .nav-links ul {
-    flex-direction: column;
-    align-items: center;
+  .sidebar__nav {
+    width: 20%;
   }
 
-  .header-right {
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 10px;
+  .header__logo img {
+    max-height: 50px !important;
+  }
+
+  .header__content {
+    align-items: flex-start;
+  }
+
+  .header__actions {
+    margin-top: 10px;
+  }
+
+  .header__menu-toggle {
+    display: block;
+    background: #e0e0e0;
+    padding: 8px 12px;
+    cursor: pointer;
+  }
+
+  .header__menu-toggle.active + .sidebar__nav {
+    display: block;
   }
 }
+
+/* For smaller mobile screens */
+@media (max-width: 480px) {
+  .header__logo img {
+    max-height: 25px;
+  }
+
+  .header__actions {
+    margin-top: 10px;
+  }
+
+  .header__contact {
+    font-size: small;
+    margin-top: 10px;
+  }
+  .container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+/* Header End */
 
 /* Container for the product sections */
 #productSections {
@@ -261,6 +353,10 @@ p {
 
   .product h4 {
     font-size: 1rem;
+  }
+
+  div {
+    font-size: medium;
   }
 }
 
