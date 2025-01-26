@@ -5,7 +5,6 @@ function renderProducts(data) {
 
   for (const category in data) {
     const products = data[category];
-    console.log("🚀 ~ renderProducts ~ products:", products);
     const section = document.createElement("section");
     section.innerHTML = `
       <h1>${category}</h1>
