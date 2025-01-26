@@ -14,60 +14,102 @@ p {
   cursor: pointer;
 }
 
-.navbar-brand img {
-  width: 70px;
+/* General Header Styles */
+.app-header {
+  padding: 10px 20px;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
 }
 
-/* Header nav start  */
-
-a.nav-link {
-  margin-right: 20px;
-  font-weight: 700;
-}
-.navbar-light .navbar-nav .active > .nav-link:hover {
-  color: #ffffff;
+.header-container {
+  max-width: 1200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
 }
 
-nav.fill ul li a.nav-link {
-  transition: all 0.5s;
+/* Logo Section */
+.logo img {
+  width: 100px;
+  height: auto;
 }
 
-nav.fill ul li a.nav-link:after {
-  text-align: left;
-  content: ".";
+/* Navigation Links */
+.nav-links ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding: 0;
   margin: 0;
-  opacity: 0;
 }
 
-nav.fill ul li a.nav-link:hover {
-  color: white;
-  z-index: 1;
+.nav-links ul li a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #333;
+  transition: color 0.3s;
 }
 
-nav.fill ul li a.nav-link:hover:after {
-  z-index: -10;
-  animation: fill 1s forwards;
-  opacity: 1;
+.nav-links ul li a:hover {
+  color: #007bff;
 }
 
-nav.fill ul li a.nav-link {
-  position: relative;
+/* Language Switcher */
+.language-switcher {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-nav.fill ul li a.nav-link:after {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-  width: 0%;
-  content: ".";
-  color: transparent;
-  background: #aaa;
-  height: 1px;
+.lang-btn {
+  border: 1px solid #007bff;
+  background-color: transparent;
+  color: #007bff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s;
 }
 
-/* End  */
+.lang-btn:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+
+/* Contact Information */
+.contact-info p {
+  margin: 0;
+  font-size: 14px;
+  color: #555;
+}
+
+.contact-info a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .nav-links ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header-right {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+  }
+}
 
 /* Container for the product sections */
 #productSections {
@@ -182,33 +224,7 @@ nav.fill ul li a.nav-link:after {
 
 /* End  */
 
-/* Categories start  */
-
-hr {
-  width: 130px;
-  background-image: linear-gradient(145deg, #f1c40f, #e67e22);
-  height: 10px;
-  border: none;
-  border-radius: 50px;
-  margin-bottom: 50px;
-}
-.categories-card {
-  box-shadow: 0px 5px 15px gray;
-  padding: 5%;
-}
-.mt-5 {
-  margin-top: 6rem !important;
-}
-/* End  */
-
-/* Footer  */
-footer {
-  padding: 5%;
-}
-/* End  */
-
 /* Nav animation */
-
 @-webkit-keyframes fill {
   0% {
     width: 0%;
@@ -260,4 +276,67 @@ footer {
   .product {
     margin-bottom: 20px;
   }
+}
+
+/* Footer Container */
+.footer {
+  padding: 30px;
+  border-top: 1px solid #ddd;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Contact Information */
+.footer h4 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.footer p {
+  margin: 10px 0;
+  color: #555;
+}
+
+.footer a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+/* Categories Section */
+.footer-categories {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  list-style: none;
+  padding: 0;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.footer-categories li a {
+  color: #555;
+  text-decoration: none;
+}
+
+.footer-categories li a:hover {
+  text-decoration: underline;
+}
+
+/* Footer Branding */
+.footer-branding {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #555;
 }
