@@ -1,18 +1,20 @@
 import productData from "./products.js";
 
-function renderProducts(categories) {
+function renderProducts(data) {
   const container = document.getElementById("productSections");
 
-  categories.forEach((category) => {
+  for (const category in data) {
+    const products = data[category];
+    console.log("🚀 ~ renderProducts ~ products:", products);
     const section = document.createElement("section");
     section.innerHTML = `
-      <h1>${category.category}</h1>
+      <h1>${category}</h1>
       <div class="products">
-        ${category.products
+        ${products
           .map(
             (product) => `
           <div class="product">
-            <img src="${product.image}" alt="${product.title}">
+            <img src="images/${product.image}.${product.extension}" alt="${product.title}">
             <h3>${product.title}</h3>
             <p>${product.description}</p>
             <h4>${product.price}</h4>
@@ -23,7 +25,7 @@ function renderProducts(categories) {
       </div>
     `;
     container.appendChild(section);
-  });
+  }
 }
 
 renderProducts(productData);
