@@ -296,7 +296,7 @@ footer {
 .product img {
   width: 100%;
   height: 250px; /* Fixed height for uniform size */
-  object-fit: cover; /* Maintain aspect ratio while filling the container */
+  object-fit: contain; /* Maintain aspect ratio while filling the container */
   display: block;
   border-bottom: 1px solid #ddd;
 }
