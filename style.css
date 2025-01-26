@@ -85,13 +85,14 @@ p {
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: #fff;
+  background-color: #f9f9f9;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   list-style: none;
 }
 
 .sidebar__dropdown:hover .sidebar__dropdown-menu {
   display: block;
+  border-radius: 5px;
 }
 
 .sidebar__dropdown-link {
@@ -115,8 +116,8 @@ p {
 }
 
 .header__lang-btn {
-  background: #e0e0e0;
-  border: none;
+  background: #fff;
+  border: 1px solid #e0e0e0;
   color: #333;
   padding: 6px 10px;
   cursor: pointer;
@@ -128,6 +129,11 @@ p {
   background-color: #ccc;
 }
 
+.header__lang-btn.active {
+  background-color: #007bff; /* Blue background for active button */
+  color: #fff; /* White text for active button */
+  border-radius: 4px; /* Optional: keep rounded corners */
+}
 .header__contact {
   display: flex;
   align-items: center;

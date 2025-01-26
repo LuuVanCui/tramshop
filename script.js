@@ -1,7 +1,10 @@
-import productData from "./products.js";
+import productsJapan from "./data/products_japan.js";
+import productsVietnam from "./data/products_vi.js";
 
 function renderProducts(data) {
   const container = document.getElementById("productSections");
+
+  container.innerHTML = "";
 
   for (const category in data) {
     const products = data[category];
@@ -27,4 +30,22 @@ function renderProducts(data) {
   }
 }
 
-renderProducts(productData);
+// Get the buttons by their IDs
+const viButton = document.getElementById("lang-vi");
+const jpButton = document.getElementById("lang-japan");
+
+function switchLanguage(event) {
+  viButton.classList.remove("active");
+  jpButton.classList.remove("active");
+
+  event.target.classList.add("active");
+
+  const selectedProducts =
+    event.target.id === "lang-vi" ? productsVietnam : productsJapan;
+  renderProducts(selectedProducts);
+}
+
+viButton.addEventListener("click", switchLanguage);
+jpButton.addEventListener("click", switchLanguage);
+
+renderProducts(productsVietnam);
