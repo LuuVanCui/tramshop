@@ -34,6 +34,7 @@ p {
   background-color: #fff; /* White background */
   color: #333; /* Dark text for contrast */
   padding: 10px 20px;
+  position: -webkit-sticky;
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -312,7 +313,7 @@ p {
   }
 
   .products {
-    grid-template-columns: repeat(2, 1fr) !important;
+    grid-template-columns: repeat(3, 1fr) !important;
   }
 
   .product h3 {

@@ -19,8 +19,8 @@ export const translations = Object.freeze({
       [LANGUAGES.JAPAN]: "お問い合わせ",
     },
     phone: {
-      [LANGUAGES.VIETNAM]: "Số điện thoại: +123 456 789",
-      [LANGUAGES.JAPAN]: "電話番号: +123 456 789",
+      [LANGUAGES.VIETNAM]: `Số điện thoại:  <a href="tel:+123456789">+123 456 789</a>`,
+      [LANGUAGES.JAPAN]: `電話番号: <a href="tel:+123456789">+123 456 789</a>`,
     },
     facebook: {
       [LANGUAGES.VIETNAM]: "Facebook: <a href='#'>Trang của chúng tôi</a>",
