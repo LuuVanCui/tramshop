@@ -1,4 +1,5 @@
 import { translations } from "./constants.js";
+import { scrollToCategory } from "./scroller.js";
 
 export function renderFooter(language, products) {
   updateFooterContacts(language);
@@ -14,13 +15,19 @@ function updateCategoryTitle(language) {
 
 function updateFooterCategories(products) {
   const categoriesList = document.querySelector(".footer-categories");
+
   categoriesList.innerHTML = "";
   const categories = Object.keys(products);
   categories.forEach((category) => {
+    const sectionId = category.toLowerCase().replace(/\s+/g, "-");
     const li = document.createElement("li");
     const a = document.createElement("a");
-    a.href = "#";
+    a.href = `#${sectionId}`;
     a.textContent = category;
+    a.onclick = (e) => {
+      e.preventDefault();
+      scrollToCategory(category);
+    };
     li.appendChild(a);
     categoriesList.appendChild(li);
   });

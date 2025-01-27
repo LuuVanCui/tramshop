@@ -21,8 +21,10 @@ function createProductCard(product) {
 
 function createProductSection(category, products) {
   const section = document.createElement("section");
+  const sectionId = category.toLowerCase().replace(/\s+/g, "-");
+
   section.innerHTML = `
-      <h1>${category}</h1>
+      <h1 id="${sectionId}">${category}</h1>
       <div class="products">
         ${products.map(createProductCard).join("")}
       </div>
