@@ -2,6 +2,7 @@ import productsJapan from "./data/products_japan.js";
 import productsVietnam from "./data/products_vi.js";
 import { setupLanguageSwitch, updateActiveButton } from "./js/buttons.js";
 import { LANGUAGES } from "./js/constants.js";
+import { renderFooter } from "./js/footer.js";
 import { renderHeader } from "./js/header.js";
 import { renderProducts } from "./js/products.js";
 
@@ -15,16 +16,19 @@ const productsByLanguage = {
   [LANGUAGES.JAPAN]: productsJapan,
 };
 
+setupLanguageSwitch(buttons, switchLanguage);
+updateData(LANGUAGES.VIETNAM, productsVietnam);
+
 function switchLanguage(event) {
-  const selectedLanguage = event.target.id;
+  const selectedLanguage = event.target.closest("button").id;
   const selectedProducts = productsByLanguage[selectedLanguage];
 
   updateActiveButton(buttons, selectedLanguage);
-  renderHeader(selectedLanguage, selectedProducts);
-  renderProducts(selectedProducts);
+  updateData(selectedLanguage, selectedProducts);
 }
 
-setupLanguageSwitch(buttons, switchLanguage);
-
-renderHeader(LANGUAGES.VIETNAM, productsVietnam);
-renderProducts(productsVietnam);
+function updateData(language, products) {
+  renderHeader(language, products);
+  renderProducts(products);
+  renderFooter(language, products);
+}

@@ -7,9 +7,9 @@ export function renderHeader(language, products) {
 
 function updateStaticLinks(language) {
   document.querySelector('[data-key="home"]').textContent =
-    translations.home[language];
+    translations.header.home[language];
   document.querySelector('[data-key="categories"]').textContent =
-    translations.categories[language];
+    translations.common.categories[language];
 }
 
 function populateCategoriesList(products) {
