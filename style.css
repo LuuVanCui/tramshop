@@ -68,6 +68,7 @@ p {
   color: #333;
   text-decoration: none;
   padding: 8px 12px;
+  border-radius: 10px;
   display: block;
 }
 
@@ -88,6 +89,8 @@ p {
   background-color: #f9f9f9;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   list-style: none;
+  width: 100px;
+  padding: 0;
 }
 
 .sidebar__dropdown:hover .sidebar__dropdown-menu {
@@ -96,9 +99,14 @@ p {
 }
 
 .sidebar__dropdown-link {
-  color: #333;
-  padding: 0 10px;
   text-decoration: none;
+  font-size: 1rem;
+  display: block;
+  padding: 0.4rem 0 0.4rem 0.5rem;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+  color: #333;
+  transition: color 0.3s ease;
 }
 
 .sidebar__dropdown-link:hover {
@@ -111,6 +119,11 @@ p {
   align-items: center;
 }
 
+/* Actions */
+.header__actions .header__lang-btn {
+  font-size: 12px;
+}
+
 .header__lang {
   margin-right: 20px;
 }
@@ -119,10 +132,12 @@ p {
   background: #fff;
   border: 1px solid #e0e0e0;
   color: #333;
-  padding: 6px 10px;
+  padding: 0;
   cursor: pointer;
   font-size: 14px;
   border-radius: 4px;
+  width: 77px;
+  height: 40px;
 }
 
 .header__lang-btn:hover {
@@ -134,7 +149,14 @@ p {
   color: #fff; /* White text for active button */
   border-radius: 4px; /* Optional: keep rounded corners */
 }
+
+.header__lang-btn img {
+  width: 32px;
+  height: 24px;
+}
+
 .header__contact {
+  font-size: 14px;
   display: flex;
   align-items: center;
 }
@@ -185,6 +207,19 @@ p {
 
   .header__menu-toggle.active + .sidebar__nav {
     display: block;
+  }
+
+  .header__lang-btn {
+    width: 40px;
+    height: 40px;
+  }
+  .header__lang-btn span {
+    display: none;
+  }
+
+  .header__lang-btn img {
+    width: 24px;
+    height: 18px;
   }
 }
 

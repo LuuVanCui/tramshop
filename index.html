@@ -45,34 +45,28 @@
 
           <nav class="sidebar__nav">
             <ul class="sidebar__menu">
-              <li><a href="#" class="sidebar__link">Home</a></li>
+              <li>
+                <a href="#" class="sidebar__link" data-key="home">Home</a>
+              </li>
               <li class="sidebar__dropdown">
-                <a href="#" class="sidebar__link">Categories</a>
-                <ul class="sidebar__dropdown-menu">
-                  <li>
-                    <a href="#" class="sidebar__dropdown-link">Category 1</a>
-                  </li>
-                  <li>
-                    <a href="#" class="sidebar__dropdown-link">Category 2</a>
-                  </li>
-                  <li>
-                    <a href="#" class="sidebar__dropdown-link">Category 3</a>
-                  </li>
-                  <li>
-                    <a href="#" class="sidebar__dropdown-link">Category 4</a>
-                  </li>
-                  <li>
-                    <a href="#" class="sidebar__dropdown-link">Category 5</a>
-                  </li>
-                </ul>
+                <a href="#" class="sidebar__link" data-key="categories">
+                  Categories
+                </a>
+                <ul class="sidebar__dropdown-menu" id="categories-list"></ul>
               </li>
             </ul>
           </nav>
 
           <div class="header__actions">
             <div class="header__lang">
-              <button class="header__lang-btn active" id="lang-vi">VI</button>
-              <button class="header__lang-btn" id="lang-japan">JP</button>
+              <button class="header__lang-btn active" id="lang-vi">
+                <img src="src/icons/vietnam.svg" alt="Vietnam Flag" />
+                <span>VI</span>
+              </button>
+              <button class="header__lang-btn" id="lang-japan">
+                <img src="src/icons/japan.svg" alt="Japan Flag" />
+                <span>JP</span>
+              </button>
             </div>
 
             <div class="header__contact">
@@ -132,7 +126,7 @@
       <!-- End  -->
     </main>
 
-    <script type="module" src="script.js"></script>
+    <script type="module" src="src/script.js"></script>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
