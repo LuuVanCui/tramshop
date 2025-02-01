@@ -38,9 +38,7 @@ function updateFooterContacts(language) {
   footerContactUs.innerHTML = `
     <h4>${translations.footer.contactUs[language]}</h4>
     <p>${translations.footer.phone[language]}</p>
-    <p>
-    ${translations.footer.facebook[language]}
-    </p>
+    <p>${translations.footer.facebook}</p>
   `;
 }
 

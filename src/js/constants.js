@@ -3,6 +3,9 @@ export const LANGUAGES = Object.freeze({
   JAPAN: "lang-japan",
 });
 
+export const PHONE_NUMBER = "+8170-9171-4417";
+export const SHOP_NAME = "Sorai Shop";
+
 export const translations = Object.freeze({
   common: {
     categories: {
@@ -19,16 +22,13 @@ export const translations = Object.freeze({
       [LANGUAGES.JAPAN]: "お問い合わせ",
     },
     phone: {
-      [LANGUAGES.VIETNAM]: `Số điện thoại:  <a href="tel:+8170-9171-4417">+8170-9171-4417</a>`,
-      [LANGUAGES.JAPAN]: `電話番号: <a href="tel:+8170-9171-4417">+8170-9171-4417</a>`,
+      [LANGUAGES.VIETNAM]: `Số điện thoại:  <a href="tel:${PHONE_NUMBER}">${PHONE_NUMBER}</a>`,
+      [LANGUAGES.JAPAN]: `電話番号: <a href="tel:${PHONE_NUMBER}">${PHONE_NUMBER}</a>`,
     },
-    facebook: {
-      [LANGUAGES.VIETNAM]: "Facebook: <a href='#'>Sorai Shop</a>",
-      [LANGUAGES.JAPAN]: "Facebook: <a href='#'>私たちのページ</a>",
-    },
+    facebook: `Facebook: ${SHOP_NAME}`,
     copyright: {
-      [LANGUAGES.VIETNAM]: "&copy; 2025 Sorai Shop. Tất cả quyền được bảo vệ.",
-      [LANGUAGES.JAPAN]: "&copy; 2025 Sorai Shop. 全著作権所有",
+      [LANGUAGES.VIETNAM]: `&copy; 2025 ${SHOP_NAME}. Tất cả quyền được bảo vệ.`,
+      [LANGUAGES.JAPAN]: `&copy; 2025 ${SHOP_NAME}. 全著作権所有`,
     },
   },
 });
