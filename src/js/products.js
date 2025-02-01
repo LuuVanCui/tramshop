@@ -10,7 +10,7 @@ export function renderProducts(products) {
 
 function createProductCard(product) {
   return `
-      <div class="product">
+      <div class="product" onclick="openDialog()">
         <img src="images/${product.image}.${product.extension}" alt="${product.title}">
         <h3>${product.title}</h3>
         <p>${product.description}</p>

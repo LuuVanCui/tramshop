@@ -19,11 +19,11 @@ export const translations = Object.freeze({
       [LANGUAGES.JAPAN]: "お問い合わせ",
     },
     phone: {
-      [LANGUAGES.VIETNAM]: `Số điện thoại:  <a href="tel:+123456789">+123 456 789</a>`,
-      [LANGUAGES.JAPAN]: `電話番号: <a href="tel:+123456789">+123 456 789</a>`,
+      [LANGUAGES.VIETNAM]: `Số điện thoại:  <a href="tel:+8170-9171-4417">+8170-9171-4417</a>`,
+      [LANGUAGES.JAPAN]: `電話番号: <a href="tel:+8170-9171-4417">+8170-9171-4417</a>`,
     },
     facebook: {
-      [LANGUAGES.VIETNAM]: "Facebook: <a href='#'>Trang của chúng tôi</a>",
+      [LANGUAGES.VIETNAM]: "Facebook: <a href='#'>Sorai Shop</a>",
       [LANGUAGES.JAPAN]: "Facebook: <a href='#'>私たちのページ</a>",
     },
     copyright: {

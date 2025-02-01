@@ -28,7 +28,7 @@
     />
     <!-- Main css -->
     <link rel="stylesheet" href="style.css" />
-    <title>SORAI SHOP</title>
+    <title>Sorai Shop- Đồ lưu niệm Việt Nam</title>
   </head>
 
   <body>
@@ -42,7 +42,14 @@
           <nav class="sidebar__nav">
             <ul class="sidebar__menu">
               <li>
-                <a href="#" class="sidebar__link" data-key="home">Home</a>
+                <a
+                  href="/"
+                  target="_self"
+                  class="sidebar__link"
+                  data-key="home"
+                >
+                  Home
+                </a>
               </li>
               <li class="sidebar__dropdown">
                 <a href="#" class="sidebar__link" data-key="categories">
@@ -66,24 +73,46 @@
             </div>
 
             <div class="header__contact">
-              <a href="tel:+123456789" class="header__phone">
+              <a href="tel:+8170-9171-4417" class="header__phone">
                 <i class="fas fa-phone"></i>
-                <span class="header__phone-number">0123 456 789</span>
+                <span class="header__phone-number">+8170-9171-4417</span>
               </a>
-              <a
-                href="https://www.facebook.com/yourfacebook"
-                target="_blank"
-                class="header__facebook"
-              >
+              <a href="#" class="header__facebook">
                 <i class="fab fa-facebook-f"></i>
-                <span class="header__facebook-text">Tram Shop</span>
+                <span class="header__facebook-text">Sorai Shop</span>
               </a>
             </div>
           </div>
         </div>
       </header>
 
+      <div class="about-section">
+        <div class="about-text">
+          <h2>Về chúng tôi</h2>
+          <p>
+            Quà lưu niệm Việt Nam là món quà tượng trưng cho nhiều nét đẹp của
+            Việt Nam, mang đậm bản sắc văn hoá, ẩm thực Việt Nam. Hy vọng rằng
+            bạn có thể lựa chọn cho mình những sản phẩm đẹp và phù hợp nhất.
+            Ngoài ra nếu bạn có nhu cầu đặt mua quà lưu niệm Việt Nam hãy liên
+            hệ cho Sorai Shop để được hỗ trợ nhé!
+          </p>
+        </div>
+        <div class="about-image">
+          <img src="/images/intro.jpg" alt="Quà lưu niệm Việt Nam" />
+        </div>
+      </div>
+
       <div id="productSections"></div>
+      <div class="dialog-overlay" id="dialogOverlay">
+        <div class="dialog" id="dialogContent">
+          <p id="productInfo">
+            Hãy liên hệ hotline 070 9171 4417 (Ms. Trâm) hoặc Facebook Sorai
+            shop để đặt mua hàng nhanh nhất.
+          </p>
+          <button class="close-btn" onclick="closeDialog()">Close</button>
+        </div>
+      </div>
+
       <button id="backToTopBtn" class="back-to-top">
         <i class="fas fa-arrow-up"></i>
       </button>
@@ -105,7 +134,8 @@
     </main>
 
     <script type="module" src="src/script.js"></script>
-    <script type="module" src="src/backToTop.js"></script>
+    <script type="module" src="src/back-to-top.js"></script>
+    <script src="src/info-dialog.js"></script>
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script
