@@ -1,6 +1,7 @@
 import productsJapan from "./data/products_japan.js";
 import productsVietnam from "./data/products_vi.js";
 import { renderAboutSession } from "./js/about.js";
+import { updateAppTitle } from "./js/app-title.js";
 import { setupLanguageSwitch, updateActiveButton } from "./js/buttons.js";
 import { LANGUAGES } from "./js/constants.js";
 import { renderContactDialog } from "./js/contact-dialog.js";
@@ -30,6 +31,7 @@ function switchLanguage(event) {
 }
 
 function updateData(language, products) {
+  updateAppTitle(language);
   renderHeader(language, products);
   renderAboutSession(language);
   renderProducts(products);
